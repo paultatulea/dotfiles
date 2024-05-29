@@ -15,3 +15,12 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Terminal
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { silent = true, noremap = true, desc = 'Exit terminal mode' })
+vim.keymap.set('n', '<leader>tv', ':vsp | term<CR>', { silent = true, desc = 'Open terminal in vertical split' })
+vim.keymap.set('n', '<leader>ts', ':sp | term<CR>', { silent = true, desc = 'Open terminal in horizontal split' })
+
+-- Buffer convenience
+vim.keymap.set('n', '<leader>vq', ":bp | vsp | bn | bd<CR>", { silent = true, desc = 'Close vertical split buffer', noremap=true })
+vim.keymap.set('n', '<leader>sq', ":bp | sp | bn | bd<CR>", { silent = true, desc = 'Close horiztonal split buffer', noremap=true })
