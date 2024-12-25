@@ -24,3 +24,7 @@ vim.keymap.set('n', '<leader>ts', ':sp | term<CR>', { silent = true, desc = 'Ope
 -- Buffer convenience
 vim.keymap.set('n', '<leader>vq', ":bp | vsp | bn | bd<CR>", { silent = true, desc = 'Close vertical split buffer', noremap=true })
 vim.keymap.set('n', '<leader>sq', ":bp | sp | bn | bd<CR>", { silent = true, desc = 'Close horiztonal split buffer', noremap=true })
+
+-- Quickfix list
+vim.keymap.set('n', '<M-k>', ':cprev<CR>', { silent = true, desc = 'Previous quickfix item' })
+vim.keymap.set('n', '<M-j>', ':cnext<CR>', { silent = true, desc = 'Next quickfix item' })
